@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        180deg,
+        #101b35,
+        #243b55,
+        #d8a7b1
+    );
+
+}
+
+
+
+/* Stars background */
+
+#stars{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+
+/* Snow background */
+
+#snow{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+
+
+/* Moon */
+
+
+.moon{
+
+    position:absolute;
+
+    top:70px;
+
+    right:120px;
+
+    width:140px;
+
+    height:140px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    box-shadow:
+
+    0 0 40px white,
+    0 0 90px rgba(255,255,255,.8);
+
+}
+
+
+
+/* Main card */
+
+
+.container{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+
+
+.glass{
+
+
+    width:650px;
+
+    padding:45px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    background:rgba(255,255,255,0.15);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:25px;
+
+
+    border:1px solid rgba(255,255,255,.3);
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.4);
+
+
+    animation:float 5s infinite ease-in-out;
+
+
+}
+
+
+
+
+@keyframes float{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+
+.intro{
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    color:#ffd9e8;
+
+}
+
+
+
+h1{
+
+    margin-top:20px;
+
+    font-size:60px;
+
+    color:white;
+
+
+    text-shadow:
+
+    0 0 15px pink;
+
+
+}
+
+
+
+
+h2{
+
+    margin-top:15px;
+
+    font-size:40px;
+
+    color:#ffe1ed;
+
+}
+
+
+
+
+.quote{
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* Button */
+
+
+button{
+
+    margin-top:35px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+        45deg,
+        #ff5fa2,
+        #ff9ecf
+    );
+
+
+    box-shadow:
+
+    0 0 20px pink;
+
+
+    animation:
+
+    giftGlow 2s infinite;
+
+
+    transition:.4s;
+
+}
+
+
+
+button:hover{
+
+
+    transform:scale(1.15);
+
+
+    box-shadow:
+
+    0 0 30px hotpink,
+
+    0 0 70px pink;
+
+
+}
+
+
+
+@keyframes giftGlow{
+
+
+    0%{
+
+        box-shadow:0 0 10px pink;
+
+    }
+
+
+    50%{
+
+        box-shadow:0 0 40px hotpink;
+
+    }
+
+
+    100%{
+
+        box-shadow:0 0 10px pink;
+
+    }
+
+
+}
+
+
+
+button:hover{
+
+
+    transform:scale(1.1);
+
+
+    box-shadow:
+
+    0 0 20px pink,
+    0 0 50px hotpink;
+
+
+}
+
+
+
+/* Letter popup */
+
+
+#letter{
+
+
+    display:none;
+
+
+    position:fixed;
+
+
+    top:0;
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    background:rgba(0,0,0,.7);
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    z-index:100;
+
+
+
+}
+
+
+
+
+.letterBox{
+
+
+    width:650px;
+
+
+    background:white;
+
+
+    color:#333;
+
+
+    padding:40px;
+
+
+    border-radius:25px;
+
+
+    line-height:1.8;
+
+
+    animation:popup .5s;
+
+
+
+}
+
+
+
+
+@keyframes popup{
+
+
+    from{
+
+        transform:scale(.5);
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+
+}
+
+
+
+.letterBox h2{
+
+
+    color:#ff4f91;
+
+
+    text-align:center;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+#message{
+
+    white-space:pre-line;
+
+    font-size:18px;
+
+}
+
+.star{
+
+    animation:twinkle 2s infinite alternate;
+
+}
+
+
+
+@keyframes twinkle{
+
+
+    from{
+
+        opacity:.2;
+
+        transform:scale(.5);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1.5);
+
+    }
+
+
+}
+
+
+
+
+#snow div{
+
+
+    animation:snowfall linear infinite;
+
+
+}
+
+
+
+@keyframes snowfall{
+
+
+    from{
+
+        transform:translateY(-100px);
+
+    }
+
+
+    to{
+
+        transform:translateY(100vh);
+
+    }
+
+
+}
+.heart{
+
+    position:fixed;
+
+    animation:heartFloat 4s linear;
+
+    z-index:200;
+
+}
+
+
+@keyframes heartFloat{
+
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+@keyframes roseFall{
+
+
+    0%{
+
+        transform:
+        translateY(-10vh)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+
+    20%{
+
+        opacity:0.8;
+
+    }
+
+
+    100%{
+
+        transform:
+        translateY(120vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+
+}
+/* =========================
+   Gift Box
+========================= */
+
+
+#giftButton{
+
+    margin-top:35px;
+
+    cursor:pointer;
+
+    color:white;
+
+}
+
+
+.giftBox{
+
+    position:relative;
+
+    width:120px;
+
+    height:100px;
+
+    margin:auto;
+
+    animation:giftMove 2s infinite;
+
+}
+
+
+
+.box{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:120px;
+
+    height:80px;
+
+    background:#ff5fa2;
+
+    border-radius:10px;
+
+    box-shadow:
+
+    0 0 30px pink;
+
+}
+
+
+
+.lid{
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+
+    height:25px;
+
+    background:#ff9ecf;
+
+    border-radius:10px;
+
+}
+
+
+
+.box:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:52px;
+
+    height:80px;
+
+    width:15px;
+
+    background:#ffd1e6;
+
+}
+
+
+
+.lid:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:52px;
+
+    height:25px;
+
+    width:15px;
+
+    background:#ffd1e6;
+
+}
+
+
+
+@keyframes giftMove{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+/* Fireworks */
+
+.spark{
+
+    position:fixed;
+
+    font-size:25px;
+
+    z-index:300;
+
+    animation:explode 1.5s ease-out forwards;
+
+}
+
+
+
+@keyframes explode{
+
+
+    from{
+
+        transform:
+        translate(0,0)
+        scale(0);
+
+        opacity:1;
+
+    }
+
+
+
+    to{
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(1.5);
+
+        opacity:0;
+
+    }
+
+}
